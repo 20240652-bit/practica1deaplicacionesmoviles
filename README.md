@@ -1,5 +1,5 @@
 ---- Práctica 1 unidad 3 ----
- Este proyecto consiste en la crecaión de un formulario de login y registro.
+ Este proyecto consiste en la creación de un formulario de login y registro.
  Las tecnologias a utilizar son:
    * HTML
    * CSS
