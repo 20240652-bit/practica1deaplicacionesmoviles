@@ -1,153 +1,217 @@
-:root {
-  --primary: #0033a0; 
-  --secondary: #4da6ff; 
-  --text-dark: #333;
-  --text-light: #666;
-  --background: #f0f8ff;
-  --card-bg: #ffffff;
-  --muted: #888;
-  --shadow: rgba(0, 0, 0, 0.1);
-}
 
-* {
-  box-sizing: border-box;
-}
 
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #0a0a0a;
+  color: white;
+}
+
+
+header {
+  background: #000;
+  border-bottom: 2px solid #00ff66;
+  color: white;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  color: #00ff66;
+  margin: 0;
+  text-shadow: 0 0 8px #00ff66;
+}
+
+header nav ul {
+  list-style: none;
   display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+header nav a {
+  color: #00ff66;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+header nav a:hover {
+  text-shadow: 0 0 10px #00ff66;
+  color: white;
+}
+
+
+.carrito-top {
+  position: fixed;
+  top: 15px;
+  right: 25px;
+  background: #00ff66;
+  color: black;
+  padding: 12px 18px;
+  border-radius: 8px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-weight: bold;
+  box-shadow: 0 0 12px #00ff66;
+}
+
+.btn-carrito-top {
+  background: black;
+  color: #00ff66;
+  border: 2px solid #00ff66;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-carrito-top:hover {
+  background: #00ff66;
+  color: black;
+}
+
+
+main {
+  padding: 25px;
+}
+
+section h2 {
+  color: #00ff66;
+  font-size: 26px;
+  text-shadow: 0 0 8px #00ff66;
+}
+
+.producto {
+  background: #111;
+  border: 2px solid #00ff66;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  width: 250px;
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 15px;
+  text-align: center;
+  box-shadow: 0 0 10px #00ff66;
+}
+
+.producto img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid #00ff66;
+}
+
+.precio {
+  color: #00ff66;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.acciones button {
+  width: 110px;
+  margin: 5px;
+  padding: 8px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
+.btn-comprar {
+  background: #00ff66;
+  color: black;
+  border: 2px solid #00ff66;
+  transition: 0.2s;
+}
+
+.btn-comprar:hover {
+  background: black;
+  color: #00ff66;
+}
+
+
+.btn-carrito {
+  background: black;
+  border: 2px solid #00ff66;
+  color: #00ff66;
+  transition: 0.2s;
+}
+
+.btn-carrito:hover {
+  background: #00ff66;
+  color: black;
+}
+
+
+
+.modal {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 255, 100, 0.15);
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  margin: 0;
-  padding: 1rem;
+  backdrop-filter: blur(4px);
 }
 
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  justify-content: center;
-  width: 100%;
-  max-width: 1200px;
-  padding: 0; 
+.modal-content {
+  background: #000;
+  padding: 20px;
+  width: 350px;
+  border-radius: 12px;
+  border: 2px solid #00ff66;
+  box-shadow: 0 0 20px #00ff66;
+  position: relative;
 }
 
-
-.card {
-  background: var(--card-bg);
-  padding: 2rem;
-  border-radius: 16px;
-  box-shadow: 0 10px 25px var(--shadow);
-  width: 100%;
-  max-width: 400px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: center;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-}
-
-
-h2 {
-  color: var(--primary);
-  margin-bottom: 1.5rem;
-  font-size: 1.8rem;
-}
-
-
-.form-group {
-  margin-bottom: 1rem;
-  text-align: left;
-}
-
-label {
-  display: block;
-  margin-bottom: 0.4rem;
-  font-weight: bold;
-  color: var(--text-dark); 
-}
-
-input {
-  width: 100%;
-  padding: 0.7rem;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 1rem;
-  transition: border-color 0.3s ease;
-}
-
-input:focus {
-  border-color: var(--primary);
-  outline: none;
-}
-
-
-button {
-  width: 100%;
-  padding: 0.9rem;
-  background: linear-gradient(90deg, var(--primary), var(--secondary));
-  color: white;
-  font-weight: bold;
-  border: none;
-  border-radius: 8px;
+.close {
+  position: absolute;
+  right: 10px;
+  top: 5px;
   cursor: pointer;
-  font-size: 1rem;
-  transition: background 0.3s ease;
+  font-size: 22px;
+  color: #00ff66;
 }
 
-button:hover {
-  background: linear-gradient(90deg, var(--secondary), var(--primary));
+#listaCarrito li {
+  padding: 8px;
+  background: #111;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  border: 1px solid #00ff66;
 }
-@media (max-width: 640px) {
-  body {
-    padding: 0.5rem;
-  }
 
-  .container {
-    gap: 1rem; 
-  }
-  
-  .card {
-    max-width: 100%; 
-    padding: 1.5rem;
-  }
-
-  h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-  }
-
-  input, button {
-    font-size: 0.9rem;
-    padding: 0.7rem;
-  }
+.btnEliminar {
+  background: red;
+  border: none;
+  padding: 3px 7px;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+  color: white;
 }
 
 
-@media (min-width: 641px) and (max-width: 1024px) {
-  .container {
-    
-    justify-content: space-around;
-  }
-  
-  .card {
-    max-width: 45%;
-    flex-grow: 1;
-  }
-
-  h2 {
-    font-size: 1.6rem;
-  }
-}
-
-
-@media (min-width: 1025px) {
-  .card {
-    
-    max-width: 300px; 
-  }
+#mensajeAgregado {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #00ff66;
+  color: black;
+  font-weight: bold;
+  padding: 12px 18px;
+  border-radius: 6px;
+  display: none;
+  z-index: 2000;
+  box-shadow: 0 0 12px #00ff66;
 }

@@ -1,42 +1,282 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Login y Registro</title>
-  <link rel="stylesheet" href="src/styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suplementos de Gimnasio</title>
+  <link rel="stylesheet" href="src/styles.css">
 </head>
-<body>
-  <div class="container">
-    <form id="loginForm" class="card">
-      <h2>🔐 Iniciar Sesión</h2>
-      <div class="form-group">
-        <label for="loginEmail">📧 Correo</label>
-        <input type="email" id="loginEmail" placeholder="ejemplo@correo.com" required />
-      </div>
-      <div class="form-group">
-        <label for="loginPassword">🔒 Contraseña</label>
-        <input type="password" id="loginPassword" placeholder="Tu contraseña" required />
-      </div>
-      <button type="submit">Entrar</button>
-    </form>
 
-    <form id="registerForm" class="card">
-      <h2>📝 Registrarse</h2>
-      <div class="form-group">
-        <label for="registerName">👤 Nombre</label>
-        <input type="text" id="registerName" placeholder="Tu nombre completo" required />
+<body>
+
+  <header>
+    <h1>Suplementos para Gimnasio</h1>
+    <nav>
+      <ul>
+        <li><a href="#creatinas">Creatinas</a></li>
+        <li><a href="#proteinas">Proteínas</a></li>
+        <li><a href="#preentreno">Pre-entreno</a></li>
+        <li><a href="#omega3">Omega 3</a></li>
+      </ul>
+    </nav>
+
+    <div id="carritoTop" class="carrito-top">
+      <span class="carrito-label">Carrito:</span>
+      <span id="totalCarritoTop" class="carrito-total">$0 MXN</span>
+      <button id="btnComprarCarritoTop" class="btn-carrito-top">Ver carrito</button>
+    </div>
+  </header>
+
+  <main>
+
+    <section id="creatinas">
+      <h2>Creatinas</h2>
+      <div class="producto">
+        <h3>Dragon Pharma Creatina</h3>
+        <img src="imagenes/dragon_pharma_creatina.webp" alt="Dragon Pharma Creatina">
+        <p class="precio" data-precio="850">$850 MXN</p>
+        <div class="acciones">
+          <button class="btn-comprar" data-action="buy">Comprar</button>
+          <button class="btn-carrito" data-action="add">Agregar al carrito</button>
+        </div>
       </div>
-      <div class="form-group">
-        <label for="registerEmail">📧 Correo</label>
-        <input type="email" id="registerEmail" placeholder="ejemplo@correo.com" required />
+
+      <div class="producto">
+        <h3>Birdman Creatina</h3>
+        <img src="imagenes/birdman_creatina.avif" alt="Birdman Creatina">
+        <p class="precio" data-precio="720">$720 MXN</p>
+        <div class="acciones">
+          <button class="btn-comprar" data-action="buy">Comprar</button>
+          <button class="btn-carrito" data-action="add">Agregar al carrito</button>
+        </div>
       </div>
-      <div class="form-group">
-        <label for="registerPassword">🔒 Contraseña</label>
-        <input type="password" id="registerPassword" placeholder="Crea una contraseña segura" required />
+
+      <div class="producto">
+        <h3>MetaNutrition Creatina</h3>
+        <img src="imagenes/metanutrition_creatina.webp" alt="MetaNutrition Creatina">
+        <p class="precio" data-precio="690">$690 MXN</p>
+        <div class="acciones">
+          <button class="btn-comprar" data-action="buy">Comprar</button>
+          <button class="btn-carrito" data-action="add">Agregar al carrito</button>
+        </div>
       </div>
-      <button type="submit">Registrar</button>
-    </form>
+
+      <div class="producto">
+        <h3>Prowinner Creatina</h3>
+        <img src="imagenes/prowinner_creatina.webp" alt="Prowinner Creatina">
+        <p class="precio" data-precio="750">$750 MXN</p>
+        <div class="acciones">
+          <button class="btn-comprar" data-action="buy">Comprar</button>
+          <button class="btn-carrito" data-action="add">Agregar al carrito</button>
+        </div>
+      </div>
+
+      <div class="producto">
+        <h3>HS Creatina</h3>
+        <img src="imagenes/HS_creatina.jpg" alt="HS Creatina">
+        <p class="precio" data-precio="700">$700 MXN</p>
+        <div class="acciones">
+          <button class="btn-comprar" data-action="buy">Comprar</button>
+          <button class="btn-carrito" data-action="add">Agregar al carrito</button>
+        </div>
+      </div>
+
+      <div class="producto">
+        <h3>GAT Creatina</h3>
+        <img src="imagenes/GAT_creatina.webp" alt="GAT Creatina">
+        <p class="precio" data-precio="780">$780 MXN</p>
+        <div class="acciones">
+          <button class="btn-comprar" data-action="buy">Comprar</button>
+          <button class="btn-carrito" data-action="add">Agregar al carrito</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="proteinas">
+      <h2>Proteínas</h2>
+
+      <div class="producto">
+        <h3>Proteína Whey</h3>
+        <img src="imagenes/whey_proteina.webp" alt="Proteína Whey">
+        <p class="precio" data-precio="1200">$1,200 MXN</p>
+        <div class="acciones">
+          <button class="btn-comprar" data-action="buy">Comprar</button>
+          <button class="btn-carrito" data-action="add">Agregar al carrito</button>
+        </div>
+      </div>
+
+      <div class="producto">
+        <h3>Mass Extreme</h3>
+        <img src="imagenes/mass_extreme_proteina.webp" alt="Mass Extreme">
+        <p class="precio" data-precio="1350">$1,350 MXN</p>
+        <div class="acciones">
+          <button class="btn-comprar" data-action="buy">Comprar</button>
+          <button class="btn-carrito" data-action="add">Agregar al carrito</button>
+        </div>
+      </div>
+
+      <div class="producto">
+        <h3>Proteína Wolf</h3>
+        <img src="imagenes/wolf_proteina.webp" alt="Proteína Wolf">
+        <p class="precio" data-precio="1100">$1,100 MXN</p>
+        <div class="acciones">
+          <button class="btn-comprar" data-action="buy">Comprar</button>
+          <button class="btn-carrito" data-action="add">Agregar al carrito</button>
+        </div>
+      </div>
+
+      <div class="producto">
+        <h3>ISO100</h3>
+        <img src="imagenes/iso_100_proteina.webp" alt="ISO100">
+        <p class="precio" data-precio="1600">$1,600 MXN</p>
+        <div class="acciones">
+          <button class="btn-comprar" data-action="buy">Comprar</button>
+          <button class="btn-carrito" data-action="add">Agregar al carrito</button>
+        </div>
+      </div>
+
+      <div class="producto">
+        <h3>Birdman Falcon</h3>
+        <img src="imagenes/birdman_proteina.webp" alt="Birdman Falcon">
+        <p class="precio" data-precio="1250">$1,250 MXN</p>
+        <div class="acciones">
+          <button class="btn-comprar" data-action="buy">Comprar</button>
+          <button class="btn-carrito" data-action="add">Agregar al carrito</button>
+        </div>
+      </div>
+
+      <div class="producto">
+        <h3>HS Proteína</h3>
+        <img src="imagenes/hs_proteina.jpg" alt="HS Proteína">
+        <p class="precio" data-precio="1100">$1,100 MXN</p>
+        <div class="acciones">
+          <button class="btn-comprar" data-action="buy">Comprar</button>
+          <button class="btn-carrito" data-action="add">Agregar al carrito</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="preentreno">
+      <h2>Pre-entreno</h2>
+
+      <div class="producto">
+        <h3>Psychotic</h3>
+        <img src="imagenes/phychotic_preentreno.webp" alt="Psychotic">
+        <p class="precio" data-precio="950">$950 MXN</p>
+        <div class="acciones">
+          <button class="btn-comprar" data-action="buy">Comprar</button>
+          <button class="btn-carrito" data-action="add">Agregar al carrito</button>
+        </div>
+      </div>
+
+      <div class="producto">
+        <h3>Optimus Nutrition</h3>
+        <img src="imagenes/op_preentreno.webp" alt="Optimus Nutrition">
+        <p class="precio" data-precio="900">$900 MXN</p>
+        <div class="acciones">
+          <button class="btn-comprar" data-action="buy">Comprar</button>
+          <button class="btn-carrito" data-action="add">Agregar al carrito</button>
+        </div>
+      </div>
+
+      <div class="producto">
+        <h3>C4 Pre-entreno</h3>
+        <img src="imagenes/C4_preentreno.webp" alt="C4">
+        <p class="precio" data-precio="880">$880 MXN</p>
+        <div class="acciones">
+          <button class="btn-comprar" data-action="buy">Comprar</button>
+          <button class="btn-carrito" data-action="add">Agregar al carrito</button>
+        </div>
+      </div>
+
+      <div class="producto">
+        <h3>Madness</h3>
+        <img src="imagenes/madness_preentreno.png" alt="Madness">
+        <p class="precio" data-precio="920">$920 MXN</p>
+        <div class="acciones">
+          <button class="btn-comprar" data-action="buy">Comprar</button>
+          <button class="btn-carrito" data-action="add">Agregar al carrito</button>
+        </div>
+      </div>
+
+      <div class="producto">
+        <h3>Venom</h3>
+        <img src="imagenes/venom_preentreno.jpg" alt="Venom">
+        <p class="precio" data-precio="970">$970 MXN</p>
+        <div class="acciones">
+          <button class="btn-comprar" data-action="buy">Comprar</button>
+          <button class="btn-carrito" data-action="add">Agregar al carrito</button>
+        </div>
+      </div>
+
+      <div class="producto">
+        <h3>CBUM Essential</h3>
+        <img src="imagenes/CBUM_preentreno.webp" alt="CBUM Essential">
+        <p class="precio" data-precio="1050">$1,050 MXN</p>
+        <div class="acciones">
+          <button class="btn-comprar" data-action="buy">Comprar</button>
+          <button class="btn-carrito" data-action="add">Agregar al carrito</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="omega3">
+      <h2>Omega 3</h2>
+
+      <div class="producto">
+        <h3>Blife Omega 3</h3>
+        <img src="imagenes/Blife_omega3.webp" alt="Blife Omega 3">
+        <p class="precio" data-precio="450">$450 MXN</p>
+        <div class="acciones">
+          <button class="btn-comprar" data-action="buy">Comprar</button>
+          <button class="btn-carrito" data-action="add">Agregar al carrito</button>
+        </div>
+      </div>
+
+      <div class="producto">
+        <h3>GAT Omega 3</h3>
+        <img src="imagenes/GAT_omega3.png" alt="GAT Omega 3">
+        <p class="precio" data-precio="500">$500 MXN</p>
+        <div class="acciones">
+          <button class="btn-comprar" data-action="buy">Comprar</button>
+          <button class="btn-carrito" data-action="add">Agregar al carrito</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="modalCompra" class="modal">
+    <div class="modal-content">
+      <span class="close closeCompra">&times;</span>
+      <h2>Datos de envío</h2>
+      <form id="formCompra">
+        <input type="text" id="nombre" placeholder="Nombre completo" required>
+        <input type="tel" id="telefono" placeholder="Número de teléfono" required>
+        <input type="text" id="direccion" placeholder="Dirección" required>
+        <button type="submit" class="btn-comprar">Confirmar compra</button>
+      </form>
+
+      <p id="mensaje" class="success" style="display:none;">
+        ✅ Su compra se ha recibido correctamente,<br>
+        la enviaremos lo más pronto posible a su domicilio.
+      </p>
+    </div>
   </div>
+
+  <div id="modalCarrito" class="modal">
+    <div class="modal-content">
+      <span class="close closeCarrito">&times;</span>
+      <h2>Carrito de Compras</h2>
+      <ul id="listaCarrito"></ul>
+      <h3>Total: <span id="totalCarritoModal">$0 MXN</span></h3>
+      <button id="btnIrAlPago" class="btn-comprar">Ir a pagar</button>
+    </div>
+  </div>
+
+  <div id="mensajeAgregado">Producto agregado al carrito</div>
+
+  <script src="script.js"></script>
+
 </body>
 </html>
