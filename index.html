@@ -12,11 +12,11 @@
       <h2>🔐 Iniciar Sesión</h2>
       <div class="form-group">
         <label for="loginEmail">📧 Correo</label>
-        <input type="email" id="loginEmail" placeholder="ejemplo@correo.com" required />
+        <input type="email" id="loginEmail" name="loginEmail" placeholder="ejemplo@correo.com" required />
       </div>
       <div class="form-group">
         <label for="loginPassword">🔒 Contraseña</label>
-        <input type="password" id="loginPassword" placeholder="Tu contraseña" required />
+        <input type="password" id="loginPassword" name="loginPassword" placeholder="Tu contraseña" required />
       </div>
       <button type="submit">Entrar</button>
     </form>
@@ -25,18 +25,32 @@
       <h2>📝 Registrarse</h2>
       <div class="form-group">
         <label for="registerName">👤 Nombre</label>
-        <input type="text" id="registerName" placeholder="Tu nombre completo" required />
+        <input type="text" id="registerName" name="registerName" placeholder="Tu nombre completo" required />
       </div>
       <div class="form-group">
         <label for="registerEmail">📧 Correo</label>
-        <input type="email" id="registerEmail" placeholder="ejemplo@correo.com" required />
+        <input type="email" id="registerEmail" name="registerEmail" placeholder="ejemplo@correo.com" required />
       </div>
       <div class="form-group">
         <label for="registerPassword">🔒 Contraseña</label>
-        <input type="password" id="registerPassword" placeholder="Crea una contraseña segura" required />
+        <input type="password" id="registerPassword" name="registerPassword" placeholder="Crea una contraseña segura" required minlength="8" />
+        <small id="passwordError" style="color:red; display:none;">La contraseña debe tener al menos 8 caracteres.</small>
       </div>
       <button type="submit">Registrar</button>
     </form>
   </div>
+
+  <script>
+    document.getElementById("registerForm").addEventListener("submit", function(e) {
+      const password = document.getElementById("registerPassword").value;
+      const errorMsg = document.getElementById("passwordError");
+      if (password.length < 8) {
+        e.preventDefault(); // Evita que se envíe el formulario
+        errorMsg.style.display = "block"; // Muestra el mensaje de error
+      } else {
+        errorMsg.style.display = "none"; // Oculta el mensaje si es válido
+      }
+    });
+  </script>
 </body>
 </html>
